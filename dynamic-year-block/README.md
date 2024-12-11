@@ -4,7 +4,7 @@
 
 * Donate link: https://ubr.link/donate-wp
 * Tags: year, dynamic, date, copyright, footer, block
-* Tested up to: 6.7
+* Tested up to: 6.7.1
 * Requires at least: 5.9
 * Requires PHP: 7.4
 * Stable tag: 0.6.5
