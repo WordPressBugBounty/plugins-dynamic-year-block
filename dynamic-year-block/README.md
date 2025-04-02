@@ -1,13 +1,13 @@
-![banner-1544x500-2024](https://github.com/EpicoStudio/dynamic-year-block/assets/1451087/617b9b26-e8db-43a4-8237-14b1d28cfa2f)
+![banner-1544x500-2025](https://github.com/user-attachments/assets/74af7a7d-c431-4737-852b-50e35c802fc3)
 
 # Dynamic Year Block
 
 * Donate link: https://ubr.link/donate-wp
 * Tags: year, dynamic, date, copyright, footer, block
-* Tested up to: 6.7.1
+* Tested up to: 6.8
 * Requires at least: 5.9
 * Requires PHP: 7.4
-* Stable tag: 0.6.5
+* Stable tag: 0.6.6
 * License: GPL 2.0 or later
 
 Auto update the copyright year in your website footer dynamically. At the turn of each year, the number will automatically change to reflect the current year.
