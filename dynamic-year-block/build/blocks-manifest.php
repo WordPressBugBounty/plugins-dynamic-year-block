@@ -5,7 +5,7 @@ return array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
 		'name' => 'epico/dynamic-year-block',
-		'version' => '0.6.7',
+		'version' => '1.0.0',
 		'title' => 'Dynamic Year',
 		'category' => 'text',
 		'icon' => 'calendar',

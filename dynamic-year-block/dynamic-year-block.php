@@ -3,8 +3,9 @@
  * Plugin Name:       Dynamic Year Block
  * Plugin URI:        https://github.com/EpicoStudio/dynamic-year-block
  * Description:       Display a copyright notice in your footer with the current year.
- * Version:           0.6.7
- * Requires at least: 6.6
+ * Version:           1.0.0
+ * Requires at least: 6.4
+ * Tested up to:      6.9
  * Requires PHP:      7.4
  * Author:            Márcio Duarte
  * Author URI:        https://epico.studio
@@ -96,3 +97,4 @@ function epico_block_hooks( $hooked_blocks, $position, $anchor_block, $context )
 
 	return $hooked_blocks;
 }
+
