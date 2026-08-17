@@ -1,10 +1,10 @@
-=== Dynamic Year Block – display a copyright notice in your footer with the current year ===
+=== Dynamic Year Block ===
 Contributors:      pagelab, epicostudio
 Tags:              year, date, dynamic, copyright, footer
-Tested up to:      6.9
+Tested up to:      7.1
 Requires at least: 6.4
 Requires PHP:      7.4
-Stable tag:        1.0.0
+Stable tag:        1.0.1
 License:           GPL 2.0 or later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 Donate link:       https://ubr.link/donate-wp
@@ -68,6 +68,9 @@ The block works only with the native Privacy Policy page. You can create one und
 = Does the plugin use the client time (via Javascript) or the server time (via PHP) to update the year? =
 The plugin uses a WordPress core function ([`current_datetime`](https://developer.wordpress.org/reference/functions/current_datetime/)) to get your server time, using the timezone specified in the “Settings → General → Timezone” on your WordPress dashboard. So it is important to set your timezone in order to display the year correctly, especially at the turn of the year.
 
+= Can page caching cause the previous year to remain visible? =
+The block is rendered dynamically whenever WordPress generates the page. However, a full-page cache or CDN may continue serving previously generated HTML until that cache expires or is purged. This behavior can occur with any caching solution, not only LiteSpeed Cache. Most caches expire or are invalidated normally, but if the previous year remains visible after January 1, purge the affected page or the full-page cache. The plugin intentionally does not bypass caching or require a vendor-specific ESI integration.
+
 = Is the included copyright notice enough to safeguard my website regarding legal issues? =
 Most probably not. While the plugin offers a basic copyright notice, it doesn't automatically solve all legal issues your website may have, nor does it constitute legal advice in any way. The site owner is solely responsible for ensuring that the website respects the law.
 
@@ -92,11 +95,19 @@ You can help with a [donation](https://ubr.link/donate-wp), by [visiting our web
 
 == Changelog ==
 
+= 1.0.1 =
+* Confirmed compatibility with WordPress 7.1, including the always-iframed post editor.
+* Security fix: ensure all block output is properly escaped using wp_kses_post().
+* Security hardening: prevent direct access to the dynamic render file.
+* Bug fix: use the registered editor script handle when loading JavaScript translations.
+* Editor compatibility: make the custom block icon inherit the current interface color.
+* Documentation: explain how full-page caches and CDNs can temporarily retain the previous year.
+* Code quality: prefix variables in render.php and update development linting and build assets.
+
 = 1.0.0 =
 * 🎉 Milestone: First stable release, after extensive testing and refinement.
 * Updated the code for WordPress version 6.9.
 * Bug fix: preventing the HTML tags from being escaped in the text fields.
-* Updated the block.json file to use the stable version of the supports properties.
 
 = 0.6.7 =
 * Improved block registration.
